@@ -1,24 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import { Fragment, useEffect } from "react";
+import Header from "./components/Header";
+import { fetchPaintingData } from "./store/painting-actions";
+import "./App.css";
+import Content from "./components/Content";
+import { useDispatch, useSelector } from "react-redux";
 
 function App() {
+  const dispatch = useDispatch();
+  const page = useSelector((state) => state.painting.page);
+
+  useEffect(() => {
+    dispatch(fetchPaintingData(page));
+  }, [page, dispatch]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Fragment>
+      <Header />
+      <Content />
+    </Fragment>
   );
 }
 

@@ -1,0 +1,117 @@
+.header {
+  /* background-color: blue; */
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  display: flex;
+}
+
+.input[type="text"] {
+  /* width: 100%; */
+  padding: 3px 15px 5px 15px;
+  height: 25px;
+  font-size: 15px;
+  margin-top: 14px;
+  margin-left: 15px;
+  margin-right: 60%;
+  background-color: inherit;
+  display: inline-block;
+  border: 2px solid rgb(255, 165, 165);
+  border-radius: 20px;
+  box-sizing: border-box;
+  color: rgb(255, 165, 165);
+  /* flex: 1; */
+}
+.input:focus {
+  outline: none;
+}
+.input::placeholder {
+  color: rgb(255, 110, 110);
+  text-transform: lowercase;
+  opacity: 50%;
+  font-family: "Questrial", sans-serif;
+}
+
+.artist,
+.favorites {
+  /* display: inline-block; */
+  font-size: 18px;
+  font-family: "Roboto", sans-serif;
+  /* font-family: "Questrial", sans-serif; */
+  font-family: "Monserrat", sans-serif;
+  font-family: "Oswald", sans-serif;
+  display: inline-block;
+  z-index: 3;
+  margin-right: 15px;
+  margin-left: auto;
+  margin-top: 7px;
+  cursor: pointer;
+}
+
+.favorites {
+  margin-left: 0;
+}
+
+.magnifier {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: rgb(253, 145, 145);
+  display: inline-block;
+  font-size: 16px;
+  top: 40%;
+  left: 10.8%;
+  position: absolute;
+  /* padding: 18px 20px; */
+  z-index: 2;
+}
+
+form {
+  width: 300px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  /* display: none; */
+  position: absolute;
+  top: 40px;
+  padding-left: 10px;
+  left: 15px;
+  background-color: #ffefef;
+  /* background-color: white; */
+  min-width: 400px;
+  border-radius: 10px;
+  z-index: 1;
+}
+
+.dropdown-content {
+  /* color: black; */
+  padding: 12px 12px 10px;
+  text-decoration: none;
+  display: block;
+}
+
+.content {
+  /* border-bottom: 1px solid rgb(221, 216, 216); */
+  height: 70px;
+}
+.arrow {
+  display: inline-block;
+  font-size: 25px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  /* line-height: 12px; */
+  margin-right: 15px;
+  background-color: transparent;
+  border: none;
+  color: rgb(255, 171, 171);
+  font-weight: inherit;
+}
+
+.arrows {
+  padding-left: 148px;
+}
